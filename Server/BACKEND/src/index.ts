@@ -1,7 +1,7 @@
 import "dotenv/config";
 import app from "./app";
-import connectDB from "./config/dbConnect";
-import { PORT } from "./config/env";
+import connectDB from "./Config/dbConnect";
+import { PORT } from "./Config/env";
 
 const Initialize_Server = async () => {
     try {
