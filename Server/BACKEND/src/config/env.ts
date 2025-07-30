@@ -1,9 +1,14 @@
-const env = (DATA: string) => { 
-    if (!process.env[DATA]) {
-        throw new Error(`${DATA} is not defined in the environment variables`);
-    }
-    return process.env[DATA]; 
-}
+// ./Server/BACKEND/src/config/db.ts
+import "dotenv/config";
 
-export const PORT = env("PORT");
-export const DB_URI = env("DB_URI");
+export const getEnv = (key: string): string => {
+  const value = process.env[key];
+  if (!value) {
+    throw new Error(`Environment variable "${key}" is not set in .env file.`);
+  }
+  return value;
+};
+
+export const PORT = getEnv("PORT");
+export const DB_URI = getEnv("DB_URI");
+export const JWT_SECRET = getEnv("JWT_SECRET");
