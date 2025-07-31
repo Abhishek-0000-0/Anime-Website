@@ -12,3 +12,4 @@ export const getEnv = (key: string): string => {
 export const PORT = getEnv("PORT");
 export const DB_URI = getEnv("DB_URI");
 export const JWT_SECRET = getEnv("JWT_SECRET");
+export const ORIGIN = getEnv("ORIGIN");
