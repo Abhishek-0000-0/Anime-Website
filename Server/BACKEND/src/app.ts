@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 	res.send("<h1>Hello from backend 👋</h1>");
 });
 
-app.use(authRoutes, "/api/v17/auth");
+app.use("/api/v17/auth", authRoutes);
 
 app.use(errorHandler);
 
